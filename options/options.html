@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="options.css" />
+    <title>Settings</title>
+  </head>
+  <body>
+    <div id="form-box">
+      <h1>Extension Settings</h1>
+      <div id="change-default">
+        <div class="row">
+          <input id="launchOnStart" type="checkbox" value="launchOnStart" />
+          <label for="launchOnStart"
+            ><strong>Launch when Chrome launches</strong></label
+          >
+        </div>
+        <div class="sub-class">
+          <div class="row">
+            <input
+              id="launch_window"
+              type="radio"
+              name="default_launch"
+              value="launch_window"
+            />
+            <label for="launch_window">In Window</label>
+          </div>
+          <div class="row">
+            <input
+              id="launch_tab"
+              type="radio"
+              name="default_launch"
+              value="launch_tab"
+            />
+            <label for="launch_tab">In Tab</label>
+          </div>
+          <i>If not specified, it will default to "In Tab"</i>
+        </div>
+      </div>
+      <div id="status"></div>
+      <div class="row">
+        <button id="save-btn" class="btn">SAVE</button>
+      </div>
+    </div>
+
+    <button id="contact" class="invisible-btn">
+      Contact For Business Inquiries
+    </button>
+    <div id="modal-window">
+      <div id="modal">
+        <h2>We'd Love To Hear From You!</h2>
+        <a href="mailto:curtis.hu688@gmail.com" id="email-link">
+          📧️ Email Me!</a
+        >
+        <button id="close-dialog" class="btn">CLOSE</button>
+      </div>
+    </div>
+    <script src="options.js"></script>
+  </body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="mini.css" />
+    <link rel="stylesheet" type="text/css" href="../common/common.css" />
+    <script type="module" src="../common/init.js"></script>
+    <script type="module" src="mini.js"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../common/player-controls.css"
+    />
+  </head>
+  <body>
+    <div id="left-panel">
+      <div id="left-panel-song-info-container">
+        <div id="left-panel-song-heading">
+        </div>
+        <div id="left-panel-song-sub-heading"></div>
+      </div>
+      <div id="updates"></div>
+      <div class="player-controls">
+        <button
+          id="shuffle-icon"
+          class="control-btn invisible-btn"
+          title="enable/disable shuffle"
+        >
+          <svg
+            width="11px"
+            height="11px"
+            viewBox="0 0 16 16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M0 3.5A.5.5 0 0 1 .5 3H1c2.202 0 3.827 1.24 4.874 2.418.49.552.865 1.102 1.126 1.532.26-.43.636-.98 1.126-1.532C9.173 4.24 10.798 3 13 3v1c-1.798 0-3.173 1.01-4.126 2.082A9.624 9.624 0 0 0 7.556 8a9.624 9.624 0 0 0 1.317 1.918C9.828 10.99 11.204 12 13 12v1c-2.202 0-3.827-1.24-4.874-2.418A10.595 10.595 0 0 1 7 9.05c-.26.43-.636.98-1.126 1.532C4.827 11.76 3.202 13 1 13H.5a.5.5 0 0 1 0-1H1c1.798 0 3.173-1.01 4.126-2.082A9.624 9.624 0 0 0 6.444 8a9.624 9.624 0 0 0-1.317-1.918C4.172 5.01 2.796 4 1 4H.5a.5.5 0 0 1-.5-.5z"
+            />
+            <path
+              d="M13 5.466V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192zm0 9v-3.932a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192z"
+            />
+          </svg>
+        </button>
+        <button
+          id="skip-backwards"
+          class="control-btn invisible-btn"
+          title="hint: press ⏪"
+        >
+          <svg
+            width="19px"
+            height="19px"
+            viewBox="0 0 16 16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M4.5 3.5A.5.5 0 0 0 4 4v8a.5.5 0 0 0 1 0V4a.5.5 0 0 0-.5-.5z"
+            />
+            <path
+              d="M4.903 8.697l6.364 3.692c.54.313 1.232-.066 1.232-.697V4.308c0-.63-.692-1.01-1.232-.696L4.903 7.304a.802.802 0 0 0 0 1.393z"
+            />
+          </svg>
+        </button>
+        <button
+          id="toggle-play"
+          class="control-btn invisible-btn"
+          title="hint: press ⏯️"
+        >
+          <svg
+            width="24px"
+            height="24px"
+            viewBox="0 0 16 16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M11.596 8.697l-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"
+            />
+          </svg>
+        </button>
+        <button
+          id="skip-forwards"
+          class="control-btn invisible-btn"
+          title="hint: press ⏩"
+        >
+          <svg
+            width="19px"
+            height="19px"
+            viewBox="0 0 16 16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M12 3.5a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5z"
+            />
+            <path
+              d="M11.596 8.697l-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"
+            />
+          </svg>
+        </button>
+        <button
+          id="repeat-icon"
+          class="control-btn invisible-btn"
+          title="repeat context"
+        >
+          <svg
+            width="11px"
+            height="11px"
+            viewBox="0 0 512 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g>
+              <g>
+                <g>
+                  <path
+                    d="M148.688,59.312L185.376,96H160C71.634,96,0,167.634,0,256s71.634,160,160,160v-32c-70.692,0-128-57.308-128-128
+				s57.308-128,128-128h25.376l-36.688,36.688l22.624,22.624L246.624,112l-75.312-75.312L148.688,59.312z"
+                  />
+                  <path
+                    d="M512,256c-0.097-88.325-71.675-159.903-160-160v32c70.692,0,128,57.308,128,128s-57.308,128-128,128h-25.376
+				l36.688-36.688l-22.624-22.624L265.376,400l75.312,75.312l22.624-22.624L326.624,416H352
+				C440.325,415.903,511.903,344.325,512,256z"
+                  />
+                  <rect x="288" y="96" width="32" height="32" />
+                  <rect x="192" y="384" width="32" height="32" />
+                </g>
+              </g>
+            </g>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <a id="album-link" href="https://accounts.spotify.com/en/login" target="_blank" rel="noreferrer noopener">
+      <img
+        id="right-panel"
+        src="/images/tinygif.gif"
+        alt="album cover"
+      />
+    </a>
+    <script type="module" src="../common/operations.js" defer></script>
+  </body>
+</html>
